@@ -7,5 +7,4 @@ langchain-openai
 langchain-community
 psycopg[binary]
 supabase
-langchain-supabase
 tiktoken
