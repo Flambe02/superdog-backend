@@ -108,7 +108,7 @@ if all([supabase_url, supabase_key, openai_api_key]):
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
             chain_type="stuff",
-            retriever=vector_store.as_retriever(search_kwargs={'threshold': 0.35}), # Seuil de similarité pour la pertinence
+            retriever=vector_store.as_retriever(),
             chain_type_kwargs={"prompt": PROMPT},
             return_source_documents=True # Pour vérifier si des documents ont été trouvés
         )
